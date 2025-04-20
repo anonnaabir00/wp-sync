@@ -15,6 +15,10 @@
     "local_db_name": "local",
     "local_db_user": "root",
     "local_db_pass": "root",
-    "local_db_host": "localhost"
-  }
+    "local_db_host": "localhost",
+
+    "local_site_url": "http://localhost:10033",
+    "table_prefix": "wp_",
+    "exclude_dirs": ["uploads", "cache", "backup","plugins/lbm-core"]
+}
   
