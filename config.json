@@ -1,0 +1,20 @@
+{
+    "local_wp_path": "/Users/anonnaabir/Local Sites/lbm-new/app/public",
+  
+    "remote_host": "sftp.pressable.com",
+    "remote_username": "gb1e09ed7361d2198",
+    "remote_path": "/htdocs",
+    "auth_type": "password",
+    "ssh_password": "rvqq01qa4qlwr2",
+  
+    "remote_db_host": "127.0.0.1",
+    "remote_db_name": "151070288",
+    "remote_db_user": "151070288",
+    "remote_db_pass": "RXZyefWv+c47s0uHhmS2b2jKkalxjJwkreiZ1CGmLU8=",
+  
+    "local_db_name": "local",
+    "local_db_user": "root",
+    "local_db_pass": "root",
+    "local_db_host": "localhost"
+  }
+  
