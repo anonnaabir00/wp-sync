@@ -6,8 +6,10 @@ require __DIR__ . '/vendor/autoload.php';
 use Symfony\Component\Console\Application;
 use WPSync\Command\SyncCommand;
 use WPSync\Command\MigrateCommand;
+use WPSync\Command\PushCommand;
 
 $app = new Application('WP Sync', '1.0.0');
 $app->add(new SyncCommand());
 $app->add(new MigrateCommand());
+$app->add(new PushCommand());
 $app->run();

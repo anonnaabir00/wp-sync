@@ -10,6 +10,7 @@ A powerful artisan-style CLI tool to sync a remote WordPress site (files + datab
 - ✅ Dump remote DB via `mysqldump` and import locally
 - ✅ Automatically update `siteurl` and `home` in local DB
 - ✅ Multi-folder exclusion using `config.json`
+- ✅ Securely push allowed folders to remote using `push`
 - ✅ `--dry-run` flag for simulation
 - ✅ `sync:all` command: one-shot sync + migrate
 - ✅ Real-time animated progress using Symfony's ProgressBar
@@ -22,10 +23,10 @@ A powerful artisan-style CLI tool to sync a remote WordPress site (files + datab
 - PHP 8.0 or newer
 - Composer
 - Required CLI tools:
-    - `sshpass` (for password-based SSH)
-    - `rsync`
-    - `mysqldump`
-    - `mysql` client
+  - `sshpass` (for password-based SSH)
+  - `rsync`
+  - `mysqldump`
+  - `mysql` client
 
 ---
 
@@ -133,6 +134,12 @@ chmod +x wp-sync
     "cache",
     "backups",
     "tmp"
+  ],
+
+  "push_dirs": [
+    "themes/my-custom-theme",
+    "mu-plugins",
+    "languages"
   ]
 }
 ```
@@ -154,6 +161,7 @@ chmod +x wp-sync
 php wp-sync sync             # Sync files + DB
 php wp-sync migrate          # Update siteurl/home only
 php wp-sync sync:all         # Full sync and migrate in one go
+php wp-sync push             # Push specific folders from push_dirs[] to remote
 
 php wp-sync sync --dry-run         # Simulate sync
 php wp-sync sync:all --dry-run     # Simulate everything
@@ -168,6 +176,7 @@ php wp-sync sync:all --dry-run     # Simulate everything
 - 📥 Imports DB locally via TCP or socket fallback
 - 🔁 Updates WordPress `siteurl` and `home` in your local DB
 - 🚀 Clean CLI UX with progress animations
+- 🔐 Pushes only folders explicitly whitelisted in `push_dirs[]`
 
 ---
 
@@ -179,4 +188,11 @@ php wp-sync sync:all --dry-run     # Simulate everything
 📥 Importing DB into local...
 🔁 Updating siteurl/home to http://example.local
 🎉 Sync complete!
+
+🚀 Pushing allowed folders to remote server...
+📂 Pushing: themes/my-custom-theme
+✅ Successfully pushed: themes/my-custom-theme
+🎉 Push complete!
 ```
+
+---

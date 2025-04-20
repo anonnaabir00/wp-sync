@@ -19,6 +19,7 @@
 
     "local_site_url": "http://localhost:10033",
     "table_prefix": "wp_",
-    "exclude_dirs": ["uploads", "cache", "backup","plugins/lbm-core"]
+    "exclude_dirs": ["uploads", "cache", "backup"],
+    "push_dirs": ["plugins/lbm-core"]
 }
   
