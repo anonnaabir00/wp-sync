@@ -1,0 +1,33 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# Sensitive/local config
+config.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs & temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+
+# Backup/zip artifacts
+*.zip
+
+# Node stuff (if used for front-end helpers)
+node_modules/
+
+# PHPUnit or test caches
+.phpunit.result.cache
+
+# Mac Finder files
+__MACOSX/

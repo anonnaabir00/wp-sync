@@ -1,0 +1,14 @@
+{
+  "name": "abir/wp-sync",
+  "description": "CLI tool to sync remote WordPress site to local",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "WPSync\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/console": "^6.0"
+  },
+  "bin": ["wp-sync"]
+}
